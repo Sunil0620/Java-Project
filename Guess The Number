@@ -1,0 +1,31 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main{
+    public static void guess_the_number(int n){
+    Scanner sc = new Scanner(System.in);
+    Random rn = new Random();
+    int i;
+    int num = rn.nextInt(70);
+    System.out.println("You have the total 5 chances to guess the number");
+    for( i = 0;i<n;i++){
+        System.out.println("guess a number between 1 to 70");
+        int guess = sc.nextInt();
+    if(num == guess ){
+        System.out.println("Congratulations! You won  :)  ");
+        break;
+    }else if(num<guess){
+        System.out.println("Entered  a greater number :( try again ");
+    }else if(num>guess){
+        System.out.println("Entered  a smaller number :( try again ");
+    }   
+}
+if(i==n){
+        System.out.println("Sorry You Loose!! Try Again  :(  ");
+        System.out.println("Number is :" + num);
+    }
+}
+    public static void main(String[] args) {
+        guess_the_number(5);    
+}
+}
